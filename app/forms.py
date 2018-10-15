@@ -1,11 +1,6 @@
 from flask_wtf import FlaskForm
-<<<<<<< HEAD
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import DataRequired, ValidationError, Email, EqualTo
-=======
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length
->>>>>>> 4415ab782310b381c33fa49c85aaf369587b0a22
 from app.models import User
 
 class LoginForm(FlaskForm):
@@ -19,15 +14,6 @@ class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
-<<<<<<< HEAD
-    submit = SubmitField('Register')
-
-    def validate_username(self,username):
-        user = User.query.filter_by(username=username.data).first()
-        if user is not None:
-            raise
-    
-=======
     submit = SubmitField('Registor')
 
     def validate_username(self, username):
@@ -54,4 +40,7 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError('Please use a different username.')
->>>>>>> 4415ab782310b381c33fa49c85aaf369587b0a22
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Say something', validators=[DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Submit')
