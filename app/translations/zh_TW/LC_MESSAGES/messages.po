@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-11-05 01:58+0800\n"
+"POT-Creation-Date: 2018-11-11 18:42+0800\n"
 "PO-Revision-Date: 2018-11-05 01:58+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant_TW\n"
@@ -38,7 +38,7 @@ msgstr "密碼"
 msgid "Remember Me"
 msgstr "記住我的登錄"
 
-#: app/forms.py:11 app/routes.py:53 app/templates/login.html:5
+#: app/forms.py:11 app/routes.py:58 app/templates/login.html:5
 msgid "Sign In"
 msgstr "登入"
 
@@ -78,72 +78,81 @@ msgstr "留言"
 msgid "Request Password Reset"
 msgstr "要求密碼重設"
 
-#: app/routes.py:27
+#: app/routes.py:32
 msgid "Your post is now live!"
 msgstr "你的留言經已發布！"
 
-#: app/routes.py:36 app/templates/base.html:21
+#: app/routes.py:41 app/templates/base.html:21
 msgid "Home"
 msgstr "主頁"
 
-#: app/routes.py:46
+#: app/routes.py:51
 msgid "Invalid username or password"
 msgstr "帳號或密碼錯誤"
 
-#: app/routes.py:70
+#: app/routes.py:75
 msgid "Congratulations, you are now a registered user!"
 msgstr "恭喜，你已成功註冊帳號！"
 
-#: app/routes.py:72 app/templates/register.html:5
+#: app/routes.py:77 app/templates/register.html:5
 msgid "Register"
 msgstr "登記"
 
-#: app/routes.py:95
+#: app/routes.py:100
 msgid "Your changes have been saved."
 msgstr "你的修改經已保存。"
 
-#: app/routes.py:100 app/templates/edit_profile.html:5
+#: app/routes.py:105 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "修改檔案"
 
-#: app/routes.py:107 app/routes.py:122
+#: app/routes.py:112 app/routes.py:127
 #, python-format
 msgid "User %(username)s not found."
 msgstr "未能找到帳號 %(username)s。"
 
-#: app/routes.py:110
+#: app/routes.py:115
 msgid "You cannot follow yourself!"
 msgstr "你不能跟隨自己！"
 
-#: app/routes.py:114
+#: app/routes.py:119
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "你已經跟隨了 %(username)s！"
 
-#: app/routes.py:125
+#: app/routes.py:130
 msgid "You cannot unfollow yourself!"
 msgstr "你不能跟隨自己！"
 
-#: app/routes.py:129
+#: app/routes.py:134
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "你沒有跟隨 %(username)s。"
 
-#: app/routes.py:142 app/templates/base.html:22
+#: app/routes.py:147 app/templates/base.html:22
 msgid "Explore"
 msgstr "探索"
 
-#: app/routes.py:153
+#: app/routes.py:158
 msgid "Check your email for the instructions to reset your password"
 msgstr "檢查你的電郵，並跟從指示重設密碼"
 
-#: app/routes.py:155 app/templates/reset_password_request.html:5
+#: app/routes.py:160 app/templates/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "重設密碼"
 
-#: app/routes.py:169
+#: app/routes.py:174
 msgid "Your password has been reset."
 msgstr "你的密碼經已重設"
+
+#: app/translate.py:8
+msgid "Error: the translation service is not configured."
+msgstr "錯誤：翻譯服務尚未設置。"
+
+#: app/translate.py:15
+#, python-format
+msgid "Error %(code)s: the translation service failed."
+msgstr "錯誤 %(code)s：翻譯失敗。"
 
 #: app/templates/404.html:4
 msgid "Not Found"
@@ -166,6 +175,10 @@ msgstr "管理員已獲通知，抱歉造成不便！"
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s於%(when)s說"
 
+#: app/templates/_post.html:25
+msgid "Translate"
+msgstr "翻譯"
+
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
 msgstr "歡迎來到Microblog"
@@ -181,6 +194,10 @@ msgstr "檔案"
 #: app/templates/base.html:29
 msgid "Logout"
 msgstr "登出"
+
+#: app/templates/base.html:66
+msgid "Error: Could not contact server."
+msgstr "錯誤：無法連結伺服器"
 
 #: app/templates/index.html:5
 #, python-format
