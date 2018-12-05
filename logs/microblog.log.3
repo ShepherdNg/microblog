@@ -1,4 +1,4 @@
-2018-12-05 04:10:08,534 ERROR: Exception on /index [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-12-05 04:04:01,341 ERROR: Exception on /index [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -45,7 +45,7 @@ Traceback (most recent call last):
   File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\index.html", line 14, in block "app_content"
     {% include '_post.html' %}
   File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\_post.html", line 4, in top-level template code
-    <a href="{{ url_for('index.user', username=post.author.username) }}">
+    <a href="{{ url_for('user', username=post.author.username) }}">
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
@@ -56,9 +56,8 @@ Traceback (most recent call last):
     force_external=external)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index.user' with values ['username']. Did you mean 'main.user' instead?
-2018-12-05 04:12:08,959 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
-2018-12-05 04:12:17,573 ERROR: Exception on /explore [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
+2018-12-05 04:04:06,637 ERROR: Exception on /index [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -74,7 +73,46 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "c:\Users\Shepherd\Program\Flask\microblog\app\main\routes.py", line 47, in explore
-    page, app.config['POSTS_PER_PAGE'], False)
-NameError: name 'app' is not defined
-2018-12-05 04:14:54,377 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\main\routes.py", line 40, in index
+    return render_template('index.html', title=_('Home'), form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\index.html", line 14, in block "app_content"
+    {% include '_post.html' %}
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\_post.html", line 4, in top-level template code
+    <a href="{{ url_for('user', username=post.author.username) }}">
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
