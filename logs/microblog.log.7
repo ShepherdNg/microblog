@@ -1,4 +1,5 @@
-2018-10-26 03:31:34,271 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MywiZXhwIjoxNTQwNDk2NDA4Ljg1MDA4MzR9.hxwQEuSVaIUMamrH0aTQ2GM6fwsglDVNzSPs4GAig8I [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-11-29 09:20:26,066 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
+2018-11-29 09:20:30,615 ERROR: Exception on /auth/login [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,30 +13,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\routes.py", line 169, in reset_password
-    return render_template('reset_password.html', form=form)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\templates\reset_password.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\templates\reset_password.html", line 15, in block "content"
-    {{ form.password2.label }}<br>
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordForm object' has no attribute 'password2'
-2018-10-26 03:31:38,943 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MywiZXhwIjoxNTQwNDk2NDA4Ljg1MDA4MzR9.hxwQEuSVaIUMamrH0aTQ2GM6fwsglDVNzSPs4GAig8I [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\auth\routes.py", line 25, in login
+    return render_template('auth/login.html',title=_('Sign In'),form=form)
+NameError: name '_' is not defined
+2018-11-29 09:21:30,155 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
+2018-11-29 09:21:31,088 ERROR: Exception on /auth/login [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -49,8 +31,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\routes.py", line 169, in reset_password
-    return render_template('reset_password.html', form=form)
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\auth\routes.py", line 26, in login
+    return render_template('auth/login.html',title=_('Sign In'),form=form)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
@@ -63,59 +45,28 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\templates\reset_password.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\Shepherd\Program\Flask\microblog\app\templates\reset_password.html", line 15, in block "content"
-    {{ form.password2.label }}<br>
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordForm object' has no attribute 'password2'
-2018-10-26 03:32:16,579 INFO: Microblog startup [in C:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:44]
-2018-10-26 03:39:16,460 INFO: Microblog startup [in C:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:44]
-2018-11-29 09:10:15,498 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
-2018-11-29 09:17:15,598 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
-2018-11-29 09:17:21,196 ERROR: Exception on / [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\auth\login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block "body"
+    {% block navbar %}
+  File "c:\Users\Shepherd\Program\Flask\microblog\app\templates\base.html", line 17, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
     reraise(exc_type, exc_value, tb)
   File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
-    rv = func()
-  File "c:\Users\Shepherd\Program\Flask\microblog\app\main\routes.py", line 17, in before_request
-    g.locale = 'zh-tw' if str(get_locale()).startswith('zh') else str(get_locale())
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
-    rv = babel.locale_selector_func()
-  File "c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py", line 74, in get_locale
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
-NameError: name 'app' is not defined
-2018-11-29 09:19:42,296 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:68]
-2018-11-29 09:19:45,894 ERROR: Exception on / [GET] [in c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
-    rv = func()
-  File "c:\Users\Shepherd\Program\Flask\microblog\app\main\routes.py", line 17, in before_request
-    g.locale = 'zh-tw' if str(get_locale()).startswith('zh') else str(get_locale())
-  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
-    rv = babel.locale_selector_func()
-  File "c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py", line 74, in get_locale
-    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
-NameError: name 'current_app' is not defined
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "c:\users\shepherd\program\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?

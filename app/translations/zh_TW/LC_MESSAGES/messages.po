@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-11-11 18:42+0800\n"
+"POT-Creation-Date: 2018-12-21 03:30+0800\n"
 "PO-Revision-Date: 2018-11-05 01:58+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant_TW\n"
@@ -18,132 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: app/__init__.py:19
+#: app/__init__.py:18
 msgid "Please log in to access this page."
 msgstr "進入本頁前請先登錄。"
-
-#: app/email.py:19
-msgid "[Microblog] Reset Your Password"
-msgstr "[Microblog] 重設密碼"
-
-#: app/forms.py:8 app/forms.py:14 app/forms.py:31
-msgid "Username"
-msgstr "帳號"
-
-#: app/forms.py:9 app/forms.py:16 app/forms.py:54
-msgid "Password"
-msgstr "密碼"
-
-#: app/forms.py:10
-msgid "Remember Me"
-msgstr "記住我的登錄"
-
-#: app/forms.py:11 app/routes.py:58 app/templates/login.html:5
-msgid "Sign In"
-msgstr "登入"
-
-#: app/forms.py:15 app/forms.py:50
-msgid "Email"
-msgstr "電郵"
-
-#: app/forms.py:17 app/forms.py:55
-msgid "Repeat Password"
-msgstr "重覆密碼"
-
-#: app/forms.py:18
-msgid "Registor"
-msgstr "登記"
-
-#: app/forms.py:23 app/forms.py:43
-msgid "Please use a different username."
-msgstr "請使用另一個帳號。"
-
-#: app/forms.py:28
-msgid "Please use a different email address."
-msgstr "請使用另一個電郵。"
-
-#: app/forms.py:32
-msgid "About me"
-msgstr "關於我"
-
-#: app/forms.py:33 app/forms.py:47
-msgid "Submit"
-msgstr "提交"
-
-#: app/forms.py:46
-msgid "Say something"
-msgstr "留言"
-
-#: app/forms.py:51 app/forms.py:56
-msgid "Request Password Reset"
-msgstr "要求密碼重設"
-
-#: app/routes.py:32
-msgid "Your post is now live!"
-msgstr "你的留言經已發布！"
-
-#: app/routes.py:41 app/templates/base.html:21
-msgid "Home"
-msgstr "主頁"
-
-#: app/routes.py:51
-msgid "Invalid username or password"
-msgstr "帳號或密碼錯誤"
-
-#: app/routes.py:75
-msgid "Congratulations, you are now a registered user!"
-msgstr "恭喜，你已成功註冊帳號！"
-
-#: app/routes.py:77 app/templates/register.html:5
-msgid "Register"
-msgstr "登記"
-
-#: app/routes.py:100
-msgid "Your changes have been saved."
-msgstr "你的修改經已保存。"
-
-#: app/routes.py:105 app/templates/edit_profile.html:5
-msgid "Edit Profile"
-msgstr "修改檔案"
-
-#: app/routes.py:112 app/routes.py:127
-#, python-format
-msgid "User %(username)s not found."
-msgstr "未能找到帳號 %(username)s。"
-
-#: app/routes.py:115
-msgid "You cannot follow yourself!"
-msgstr "你不能跟隨自己！"
-
-#: app/routes.py:119
-#, python-format
-msgid "You are following %(username)s!"
-msgstr "你已經跟隨了 %(username)s！"
-
-#: app/routes.py:130
-msgid "You cannot unfollow yourself!"
-msgstr "你不能跟隨自己！"
-
-#: app/routes.py:134
-#, python-format
-msgid "You are not following %(username)s."
-msgstr "你沒有跟隨 %(username)s。"
-
-#: app/routes.py:147 app/templates/base.html:22
-msgid "Explore"
-msgstr "探索"
-
-#: app/routes.py:158
-msgid "Check your email for the instructions to reset your password"
-msgstr "檢查你的電郵，並跟從指示重設密碼"
-
-#: app/routes.py:160 app/templates/reset_password_request.html:5
-msgid "Reset Password"
-msgstr "重設密碼"
-
-#: app/routes.py:174
-msgid "Your password has been reset."
-msgstr "你的密碼經已重設"
 
 #: app/translate.py:8
 msgid "Error: the translation service is not configured."
@@ -154,21 +31,132 @@ msgstr "錯誤：翻譯服務尚未設置。"
 msgid "Error %(code)s: the translation service failed."
 msgstr "錯誤 %(code)s：翻譯失敗。"
 
-#: app/templates/404.html:4
-msgid "Not Found"
-msgstr "找不到"
+#: app/auth/email.py:7
+msgid "[Microblog] Reset Your Password"
+msgstr "[Microblog] 重設密碼"
 
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Back"
-msgstr "返回"
+#: app/auth/forms.py:8 app/auth/forms.py:14 app/main/forms.py:19
+msgid "Username"
+msgstr "帳號"
 
-#: app/templates/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "未知錯誤"
+#: app/auth/forms.py:9 app/auth/forms.py:16 app/auth/forms.py:35
+msgid "Password"
+msgstr "密碼"
 
-#: app/templates/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "管理員已獲通知，抱歉造成不便！"
+#: app/auth/forms.py:10
+msgid "Remember Me"
+msgstr "記住我的登錄"
+
+#: app/auth/forms.py:11 app/auth/routes.py:26 app/templates/auth/login.html:5
+msgid "Sign In"
+msgstr "登入"
+
+#: app/auth/forms.py:15 app/auth/forms.py:31
+msgid "Email"
+msgstr "電郵"
+
+#: app/auth/forms.py:17 app/auth/forms.py:36
+msgid "Repeat Password"
+msgstr "重覆密碼"
+
+#: app/auth/forms.py:18
+msgid "Registor"
+msgstr "登記"
+
+#: app/auth/forms.py:23 app/main/forms.py:31
+msgid "Please use a different username."
+msgstr "請使用另一個帳號。"
+
+#: app/auth/forms.py:28
+msgid "Please use a different email address."
+msgstr "請使用另一個電郵。"
+
+#: app/auth/forms.py:32 app/auth/forms.py:37
+msgid "Request Password Reset"
+msgstr "要求密碼重設"
+
+#: app/auth/routes.py:19
+msgid "Invalid username or password"
+msgstr "帳號或密碼錯誤"
+
+#: app/auth/routes.py:43
+msgid "Congratulations, you are now a registered user!"
+msgstr "恭喜，你已成功註冊帳號！"
+
+#: app/auth/routes.py:45 app/templates/auth/register.html:5
+msgid "Register"
+msgstr "登記"
+
+#: app/auth/routes.py:56
+msgid "Check your email for the instructions to reset your password"
+msgstr "檢查你的電郵，並跟從指示重設密碼"
+
+#: app/auth/routes.py:58 app/templates/auth/reset_password_request.html:5
+msgid "Reset Password"
+msgstr "重設密碼"
+
+#: app/auth/routes.py:71
+msgid "Your password has been reset."
+msgstr "你的密碼經已重設"
+
+#: app/main/forms.py:9 app/main/routes.py:127
+msgid "Search"
+msgstr "搜索"
+
+#: app/main/forms.py:20
+msgid "About me"
+msgstr "關於我"
+
+#: app/main/forms.py:21 app/main/forms.py:35
+msgid "Submit"
+msgstr "提交"
+
+#: app/main/forms.py:34
+msgid "Say something"
+msgstr "留言"
+
+#: app/main/routes.py:32
+msgid "Your post is now live!"
+msgstr "你的留言經已發布！"
+
+#: app/main/routes.py:41 app/templates/base.html:21
+msgid "Home"
+msgstr "主頁"
+
+#: app/main/routes.py:53 app/templates/base.html:22
+msgid "Explore"
+msgstr "探索"
+
+#: app/main/routes.py:76
+msgid "Your changes have been saved."
+msgstr "你的修改經已保存。"
+
+#: app/main/routes.py:81 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "修改檔案"
+
+#: app/main/routes.py:88 app/main/routes.py:103
+#, python-format
+msgid "User %(username)s not found."
+msgstr "未能找到帳號 %(username)s。"
+
+#: app/main/routes.py:91
+msgid "You cannot follow yourself!"
+msgstr "你不能跟隨自己！"
+
+#: app/main/routes.py:95
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "你已經跟隨了 %(username)s！"
+
+#: app/main/routes.py:106
+msgid "You cannot unfollow yourself!"
+msgstr "你不能跟隨自己！"
+
+#: app/main/routes.py:110
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "你沒有跟隨 %(username)s。"
 
 #: app/templates/_post.html:14
 #, python-format
@@ -183,19 +171,19 @@ msgstr "翻譯"
 msgid "Welcome to Microblog"
 msgstr "歡迎來到Microblog"
 
-#: app/templates/base.html:26
+#: app/templates/base.html:33
 msgid "Login"
 msgstr "登入"
 
-#: app/templates/base.html:28
+#: app/templates/base.html:35
 msgid "Profile"
 msgstr "檔案"
 
-#: app/templates/base.html:29
+#: app/templates/base.html:36
 msgid "Logout"
 msgstr "登出"
 
-#: app/templates/base.html:66
+#: app/templates/base.html:73
 msgid "Error: Could not contact server."
 msgstr "錯誤：無法連結伺服器"
 
@@ -212,25 +200,17 @@ msgstr "較新"
 msgid "Older posts"
 msgstr "較舊"
 
-#: app/templates/login.html:12
-msgid "New User?"
-msgstr "新用戶？"
+#: app/templates/search.html:4
+msgid "Search Result"
+msgstr "搜索結果"
 
-#: app/templates/login.html:12
-msgid "Click to Register!"
-msgstr "點擊進行註冊！"
+#: app/templates/search.html:13
+msgid "Previous results"
+msgstr "前一頁"
 
-#: app/templates/login.html:14
-msgid "Forgot Your Password?"
-msgstr "忘記密碼？"
-
-#: app/templates/login.html:15
-msgid "Click to Reset It"
-msgstr "點擊重設"
-
-#: app/templates/reset_password.html:5
-msgid "Reset Your Password"
-msgstr "重設密碼"
+#: app/templates/search.html:19
+msgid "Next results"
+msgstr "下一頁"
 
 #: app/templates/user.html:8
 msgid "User"
@@ -259,4 +239,40 @@ msgstr "跟隨"
 #: app/templates/user.html:19
 msgid "Unfollow"
 msgstr "取消跟隨"
+
+#: app/templates/auth/login.html:12
+msgid "New User?"
+msgstr "新用戶？"
+
+#: app/templates/auth/login.html:12
+msgid "Click to Register!"
+msgstr "點擊進行註冊！"
+
+#: app/templates/auth/login.html:14
+msgid "Forgot Your Password?"
+msgstr "忘記密碼？"
+
+#: app/templates/auth/login.html:15
+msgid "Click to Reset It"
+msgstr "點擊重設"
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "重設密碼"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr "找不到"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "返回"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "未知錯誤"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "管理員已獲通知，抱歉造成不便！"
 
