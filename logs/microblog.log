@@ -72,3 +72,5 @@ Traceback (most recent call last):
 elasticsearch.exceptions.RequestError: RequestError(400, 'search_phase_execution_exception', 'numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count')
 2018-12-21 03:28:45,146 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:71]
 2018-12-21 03:30:32,541 INFO: Microblog startup [in c:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:71]
+2018-12-24 08:50:33,024 INFO: Microblog startup [in C:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:71]
+2018-12-24 08:51:05,293 INFO: Microblog startup [in C:\Users\Shepherd\Program\Flask\microblog\app\__init__.py:71]
